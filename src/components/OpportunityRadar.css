@@ -1,0 +1,244 @@
+.opp-container {
+  color: #e2e8f0;
+  animation: fadeIn 0.5s ease;
+}
+
+.opp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.opp-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.opp-search {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+}
+
+.opp-search input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+}
+
+.opp-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+}
+
+.opp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.opp-list h3 {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.opp-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.opp-card:hover, .opp-card.active {
+  border-color: #38bdf8;
+  background: #0f172a;
+}
+
+.opp-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.opp-card-header h4 {
+  color: white;
+  font-size: 1rem;
+}
+
+.opp-cat {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  background: #334155;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.opp-tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.opp-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric .label { color: #64748b; }
+.metric .val { color: #e2e8f0; font-weight: 600; }
+.metric .val.green { color: #34d399; }
+
+.opp-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-thumb {
+  background: #334155;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-thumb:hover { background: #475569; }
+
+/* Detail Section */
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.btn-add-plan {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.detail-main-card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-main-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.detail-item .label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.detail-item .highlight {
+  color: #34d399;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.roadmap-section {
+  margin-bottom: 2rem;
+}
+
+.roadmap-section h4 {
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.8rem;
+  color: #cbd5e1;
+}
+
+.step-check {
+  width: 20px;
+  height: 20px;
+  background: #34d399;
+  color: #064e3b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.ai-insight-box {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(56, 189, 248, 0.1));
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+
+.ai-insight-box .ai-label {
+  color: #a78bfa;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.ai-insight-box p {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .opp-layout { grid-template-columns: 1fr; }
+}

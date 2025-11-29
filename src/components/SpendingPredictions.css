@@ -1,0 +1,261 @@
+.predict-container {
+  color: #e2e8f0;
+  animation: fadeIn 0.5s ease;
+}
+
+.predict-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.predict-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.predict-controls {
+  display: flex;
+  background: #1e293b;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.predict-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.predict-btn.active {
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.predict-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.confidence-badge {
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.trajectory-chart {
+  height: 250px;
+  background: #0f172a;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px; /* Added padding to prevent label cutoff */
+}
+
+.chart-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.chart-line {
+  height: 2px;
+  position: absolute;
+  top: 50%;
+}
+
+.chart-line.past {
+  left: 0;
+  width: 50%;
+  background: #94a3b8;
+}
+
+.chart-line.future {
+  left: 50%;
+  width: 50%;
+  background: #38bdf8;
+  border-top: 2px dashed #38bdf8;
+  background: transparent;
+}
+
+.chart-point.current {
+  width: 12px;
+  height: 12px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.chart-label {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.75rem; /* Reduced font size */
+  color: #64748b;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.past-label { left: 0; }
+.current-label { left: 50%; transform: translateX(-50%); color: #e2e8f0; }
+.future-label { right: 0; }
+
+.predict-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  border-top: 1px solid #334155;
+  padding-top: 1.5rem;
+}
+
+.p-stat .label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.p-stat .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.value.highlight { color: #facc15; }
+.value.safe { color: #34d399; }
+
+/* Sidebar */
+.predict-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.p-expense-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+.p-expense-item:last-child { border-bottom: none; }
+
+.date-box {
+  background: #0f172a;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 50px;
+}
+
+.date-box .day { display: block; font-size: 1.1rem; font-weight: 700; color: white; }
+.date-box .month { display: block; font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
+
+.exp-details h4 {
+  font-size: 0.95rem;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.exp-type {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.exp-amount {
+  margin-left: auto;
+  font-weight: 600;
+  color: #f87171;
+}
+
+.ai-forecast-card {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.ai-icon-large {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.ai-forecast-card h3 {
+  color: #e879f9;
+  margin-bottom: 0.5rem;
+}
+
+.ai-forecast-card p {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.btn-action {
+  background: #e879f9;
+  color: #0f172a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%; /* Full width for better interaction */
+}
+
+.btn-action:hover { transform: scale(1.02); }
+
+.btn-action:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-action.success {
+  background: #34d399;
+  color: #064e3b;
+}
+
+@media (max-width: 1024px) {
+  .predict-layout { grid-template-columns: 1fr; }
+}

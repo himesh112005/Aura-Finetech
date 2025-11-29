@@ -1,0 +1,119 @@
+.menubar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e293b;
+  padding: 0 20px;
+  height: 60px;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menubar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menubar-logo span {
+  color: #38bdf8;
+}
+
+.menubar-items {
+  display: flex;
+  gap: 5px;
+  height: 100%;
+}
+
+.menubar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 15px;
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.menubar-item:hover {
+  background-color: #334155;
+  color: #38bdf8;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #334155;
+  min-width: 200px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e2e8f0;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #475569;
+  color: #38bdf8;
+}
+
+.menubar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ai-btn {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.ai-btn:hover {
+  transform: scale(1.05);
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #475569;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #38bdf8;
+}

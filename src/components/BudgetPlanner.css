@@ -1,0 +1,374 @@
+.budget-container {
+  color: #e2e8f0;
+  animation: fadeIn 0.5s ease;
+}
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.budget-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary-outline {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary-outline:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* Summary Cards */
+.budget-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.summary-card .label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card .value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.value.positive { color: #4ade80; }
+.value.negative { color: #f87171; }
+
+.progress-mini {
+  height: 4px;
+  background: #334155;
+  border-radius: 2px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-mini .fill {
+  height: 100%;
+  background: #38bdf8;
+}
+
+/* Content Layout */
+.budget-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Categories */
+.categories-section {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.categories-section h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.cat-details {
+  flex: 1;
+}
+
+.cat-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.cat-amount {
+  color: #94a3b8;
+}
+
+.cat-amount .danger {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.cat-progress-bg {
+  height: 8px;
+  background: #0f172a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cat-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* Add Expense Form */
+.add-expense-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.expense-card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.expense-card h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #38bdf8;
+}
+
+.btn-add-expense {
+  width: 100%;
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add-expense:hover {
+  background: #0ea5e9;
+}
+
+/* AI Card */
+.budget-ai-card {
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.ai-icon {
+  font-size: 1.5rem;
+}
+
+.ai-text h4 {
+  color: #a78bfa;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.ai-text p {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+/* Edit Modal */
+.edit-budget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.edit-budget-card {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #334155;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.edit-budget-card h3 {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.edit-categories {
+  margin: 1.5rem 0;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.edit-categories h4 {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.edit-cat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.edit-cat-row .cat-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e2e8f0;
+}
+
+.edit-cat-row input {
+  width: 120px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: right;
+}
+
+.edit-summary {
+  background: #0f172a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.edit-summary p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #94a3b8;
+}
+
+.edit-summary p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.edit-summary .positive { color: #4ade80; }
+.edit-summary .negative { color: #f87171; }
+
+.edit-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #94a3b8;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #334155;
+  color: white;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  border: none;
+  color: #0f172a;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+}
+
+.salary-input {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .budget-content {
+    grid-template-columns: 1fr;
+  }
+}

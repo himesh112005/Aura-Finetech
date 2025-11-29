@@ -1,0 +1,266 @@
+.reports-container {
+  color: #e2e8f0;
+  animation: fadeIn 0.5s ease;
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.reports-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.report-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.report-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.report-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.btn-export {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.metric-label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.metric-val {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.metric-trend {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.metric-trend.up { color: #4ade80; }
+.metric-trend.down { color: #38bdf8; } /* Good down trend like debt */
+.metric-trend.flat { color: #94a3b8; }
+
+/* Reports Content */
+.reports-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.chart-section-large {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+.dot.income { background: #38bdf8; }
+.dot.expense { background: #f472b6; }
+
+.chart-visual-placeholder {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bar-chart-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.chart-column {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.bar-income {
+  width: 100%;
+  background: #38bdf8;
+  border-radius: 4px 4px 0 0;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bar-expense {
+  width: 60%;
+  background: #f472b6;
+  border-radius: 4px 4px 0 0;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+.col-label {
+  position: absolute;
+  bottom: -25px;
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+/* Analysis Sidebar */
+.analysis-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ai-summary-card {
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, rgba(15, 23, 42, 0) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.ai-badge {
+  background: #10b981;
+  color: #064e3b;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ai-summary-card h3 {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.ai-summary-card p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.insight-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.insight-icon { font-size: 1.2rem; }
+
+.insight-text strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  margin-bottom: 2px;
+}
+
+.insight-text p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.category-breakdown {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.category-breakdown h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.progress-line {
+  height: 6px;
+  background: #0f172a;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-line .fill {
+  height: 100%;
+  background: #64748b;
+}
+
+@media (max-width: 1024px) {
+  .reports-content { grid-template-columns: 1fr; }
+}

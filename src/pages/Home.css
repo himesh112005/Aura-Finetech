@@ -1,0 +1,485 @@
+.home-page {
+  width: 100%;
+}
+
+/* Sections */
+section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-header.centered {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-tag {
+  color: #38bdf8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* How It Works */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.step-number {
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.03);
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.step-icon {
+  font-size: 1.8rem;
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+  background: rgba(56, 189, 248, 0.1);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.step h3 {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.step p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Genome Visualization (Hero) - Updated */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.genome-card-preview {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: float 6s ease-in-out infinite;
+}
+
+.genome-status {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.genome-status .highlight {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.genome-art-container {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.genome-gradient-blob {
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph-blob 8s ease-in-out infinite;
+  filter: blur(20px);
+  opacity: 0.9;
+  box-shadow: inset 0 0 30px rgba(255,255,255,0.2);
+}
+
+@keyframes morph-blob {
+  0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: rotate(0deg) scale(1); }
+  34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: rotate(120deg) scale(1.1); }
+  67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: rotate(240deg) scale(0.95); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Genome Section (Content) */
+.genome-section {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  overflow: hidden;
+}
+
+.genome-content {
+  position: relative;
+  z-index: 2;
+}
+
+.genome-visual-center {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 4rem;
+}
+
+.dna-spinner {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: spin-dna 20s linear infinite;
+  box-shadow: 0 0 60px rgba(56, 189, 248, 0.2);
+  border: 2px solid rgba(56, 189, 248, 0.1);
+}
+
+@keyframes spin-dna {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.genome-traits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.trait {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.trait:hover {
+  transform: translateY(-5px);
+  border-color: #a78bfa;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.trait-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(167, 139, 250, 0.05));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #a78bfa;
+  flex-shrink: 0;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.trait-info h4 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.trait-info p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: #1e293b;
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 350px;
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pricing-card.featured {
+  border-color: #38bdf8;
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing-header h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-amount {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  color: #94a3b8;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.period {
+  color: #94a3b8;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.pricing-features li {
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pricing-features i {
+  color: #38bdf8;
+}
+
+/* AI Demo Section */
+.ai-demo-section {
+    background: #0f172a;
+    padding: 5rem 0;
+}
+
+.demo-terminal {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+}
+
+.terminal-header {
+    background: #334155;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #475569;
+}
+
+.terminal-dots span:nth-child(1) { background: #ef4444; }
+.terminal-dots span:nth-child(2) { background: #f59e0b; }
+.terminal-dots span:nth-child(3) { background: #10b981; }
+
+.terminal-title {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.terminal-window {
+    padding: 2rem;
+    min-height: 200px;
+    color: #e2e8f0;
+}
+
+.ai-label {
+    color: #38bdf8;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.terminal-input-area {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #0f172a;
+    border-top: 1px solid #334155;
+}
+
+.prompt-char {
+    color: #10b981;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.terminal-input-area input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+.terminal-input-area button {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.terminal-input-area button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-reset-demo {
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-reset-demo:hover {
+    background: rgba(56, 189, 248, 0.1);
+}
+
+@media (max-width: 768px) {
+  .pricing-card.featured { transform: none; }
+  .pricing-grid { flex-direction: column; align-items: center; }
+  .pricing-card { width: 100%; }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+  }
+  
+  .hero-content {
+    margin-bottom: 4rem;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .genome-visualization {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .node {
+    transform: rotate(calc(var(--i) * 90deg)) translate(120px) rotate(calc(var(--i) * -90deg));
+  }
+  
+  .node:hover {
+    transform: rotate(calc(var(--i) * 90deg)) translate(130px) rotate(calc(var(--i) * -90deg)) scale(1.1);
+  }
+  
+  .genome-ring::before {
+    width: 240px;
+    height: 240px;
+  }
+}
